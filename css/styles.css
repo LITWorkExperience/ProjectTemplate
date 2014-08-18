@@ -1,0 +1,39 @@
+.navbar-fill {
+  background-color: #1A274E;
+  /* border-bottom: 6px solid #BD5248; */
+  border-bottom: 6px solid darkorange;
+}
+
+.btnGap{
+  margin-top: 30px;
+}
+
+.dvCarDetails {
+  display: none;
+}
+
+.dvQuoteDetails {
+  display: none;
+}
+
+.footer{
+  height:20px;
+  margin-top:15%;
+}
+
+.container {
+  background-color: #F6F6F8;
+}
+
+body {
+  background-color: #F6F6F8;
+}
+
+p.text-muted {
+  font-size: 12px;
+}
+
+a.navLink:hover
+{ 
+  color: darkorange;
+}

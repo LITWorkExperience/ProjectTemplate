@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="insurance application, work experience, learning, programming, web development">
+    <meta name="author" content="Andrew Hiles, James Anderson">
+    
+    <title>Car Insurance Application</title>
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <nav class="navbar navbar-default navbar-static-top navbar-fill" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMenu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-heart-empty"></span> Car Insurance App</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="nav navbar-nav">
+          <li id="personalLink"  class="active"><a href="#" class="navLink">Personal Details</a></li>
+          <li id="carLink"><a href="#" class="navLink">Car Details</a></li>
+          <li id="quoteLink"><a href="#"  class="navLink">Retrieve Quote</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    <div class="container wrap">
+      <section id="body" class="container">
+<!--#######################################################################################################################################################
+     Do not change any of the code above this comment to begin with, it is precompleted so that you get more time doing the actual challenges and not
+     working on the setup of the code
+    #######################################################################################################################################################--> 
+
+      <!-- WRAP PERSONAL DETAILS FORM IN CHILD PANEL --> 
+      <div id="dvPersonalDetails">
+        <div id="dvPersonalDetailsAlert" class="alert alert-warning personalDetailsAlert">Error Message</div>
+        <h1>Please enter your details</h1>
+        <p>In order to provide you with a quote, we need a few details. Please complete the form below. Thanks.</p>
+
+        <div class="row">
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label for="nameInput" class="control-label col-md-2">Name</label>
+              <div class="col-md-4">
+                <input id="txtName" type="text" name="nameInput" class="form-control personalDetails" placeholder="Your Name" />
+              </div>
+            </div>
+
+            <!-- The code for the remainder of the personal fields will be added here -->
+
+            <div class="form-group">
+              <div class="col-md-4">
+                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" />
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- WRAP CAR DETAILS FORM IN CHILD PANEL -->
+      <div id="dvCarDetails" class="dvCarDetails">
+        <!-- Code for the car details section to be added here -->
+      </div>
+
+
+      <!-- WRAP Quote DETAILS FORM IN CHILD PANEL -->
+      <div id="dvQuoteDetails" class="dvQuoteDetails">
+        <!-- The display fields for the quote will be added here -->
+      </div>
+
+<!--#######################################################################################################################################################
+     Do not change any of the code below this comment to begin with, it is precompleted so that you get more time doing the actual challenges and not
+     working on the setup of the code
+    #######################################################################################################################################################--> 
+
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        
+      </div>
+    </div>
+    
+  </body>
+</html>
