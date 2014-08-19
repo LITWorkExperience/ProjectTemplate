@@ -57,8 +57,6 @@
           // Put the return value into Label created on quote details
           // Hide the Car Details section
           // Display the quote details page
-          $("#txtQuote").text(msg);
-          showQuoteDetails();
       });
   }
 
