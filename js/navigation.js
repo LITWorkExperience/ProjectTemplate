@@ -50,7 +50,7 @@
       // Get the values from the page elements that you need to create your JSON
 
       $.ajax({
-          type: "POST",
+          type: "GET",
           url: "http://localhost:53753/api/rating/CalculateRates",
           data: { /* create JSON here */ }
         }).done(function(msg) {
