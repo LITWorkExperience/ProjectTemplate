@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>HTML</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet">  
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+                <h2>
+                    <a name="intro">HTML - Hypertext Markup Language</a>
+                </h2>
+                <p class="lead">
+                    <em>The backbone of the internet</em>
+                </p>
+                <p>
+                    HTML stands for HyperText Markup Language. Developed by scientist Tim Berners-Lee in 1990, HTML is the code that helps us communicate with others on the world wide web.
+                </p>
+                <p>
+                    When writing HTML, you add "tags" to the text in order to create the structure. These tags tell the browser how to display the text or graphics in the document. All tags should be opened and closed correctly. For example, the following document has a simple layout. Notice there are three major parts: a heading, two paragraphs and a bulleted list.
+                </p>
+<pre>
+<!-- Display HTML tags in XMP(Extensible Metadata Platform) -->
+<xmp>
+<html>
+    <h1>This is heading text</h1>
+    <p>This is a section of paragraph text</p>
+    <p>This is another section of paragraph text :)</p>
+    <!-- This is an unordered list element. It contains list items and displays them onto the page as bullet points by default -->
+    <ul>
+        <li>first listitem</li>
+        <li>second listitem</li>
+        <li>third listitem</li>
+    </ul>
+    <!-- End of unordered list -->
+</html>
+</xmp>
+<!-- End of XMP code block -->
+</pre>   
+                
+                <p>The code above will create the following output when viewed in a web browser.</p>
+                <img class="codeOutput" src="html1.png">
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>The tools you need</h3>
+                <p>
+                    Fortunately, HTML is written in plain text. That means you aren't required to spend lots of money on editing software to create HTML. All you need to create a document is a simple text editor. Every operating system comes with a text editor pre-installed(If you are using Windows, it's Notepad. If you are using an Apple computer, it's TextEdit). One of the most popular free text editors available right now is <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>, which is available for Windows and Apple machines.
+                </p>
+                
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>The basics</h3>
+                <p>
+                As with everything code-related, there are rules which we as developers must abide by. In HTML, the rules are fairly simple. For starters, HTML tags are always surrounded by what are called angle brackets &lt; and &gt;.<br><br>
+                For example: 
+                <pre>
+                <!-- Display HTML tags in XMP(Extensible Metadata Platform) -->
+                <xmp>
+<p>This is how to construct a paragraph in HTML</p>
+                </xmp>
+                <!-- End of XMP code block -->
+                </pre>
+                </p>
+                <p>
+                    It's important to note that if you forget to include tags when writing HTML, the web page won't appear as you would like it to. Fortunately, with most text editors(especially Sublime Text), it's easy to spot where an angle bracket is missing, etc.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Elements</h3>
+                <p>
+                    The words and letters between these two angle brackets are called elements. These are the coded commands within HTML, which tell the browser how to display the web page. Below is a basic example of a header element followed by a span element.
+                </p>
+                <pre>
+                    <xmp>
+<h1>I am a header element</h1>
+<span>I am a span element</span>
+                    </xmp>
+                </pre>
+                <h4>Examples of elements</h4>
+                <p><b>&lt;a&gt;</b></p>
+                <p>The &lt;a&gt; element is known as an HTML anchor. It creates a hyperlink.</p>
+<pre>
+<xmp>
+<a href="http://www.google.com/">
+Link to Google
+</a>
+</xmp>
+</pre>
+                <p><b>&lt;body&gt;</b></p>
+                <p>The &lt;body&gt; element represents the content of the HTML document. Unlike other HTML elements, the &lt;body&gt; element can only appear once in a document.</p>
+
+<pre>
+<xmp>
+<body>
+<!-- All content goes here -->
+</body>
+</xmp>
+</pre>
+                <p><b>&lt;button&gt;</b></p>
+                <p>The &lt;button&gt; element creates a button on the document.</p>
+
+<pre>
+<xmp>
+<button id="btn">Click here</button>
+</xmp>
+</pre>
+                <p><b>&lt;hr&gt;</b></p>
+                <p>The &lt;hr&gt; element creates a horizontal rule in the document. It is normally used to create a line between paragraphs on an HTML page.</p>
+
+<pre>
+<xmp>
+<p>This is the first paragraph.</p>
+<!-- horizontal rule used to break up space between paragraphs and add line to document -->
+<hr>
+<p>This is the second paragraph.</p>
+</xmp>
+</pre>
+                <p>
+                    This section simply explains a few of the most basic elements used in HTML and how they can be used. If you want to know more about all of the elements currently available in HTML, the <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a> is a good place to read up on things. MDN is maintained by the developers who created Mozilla FireFox and their learning materials are incredibly beneficial for web developers.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Page Structure</h3>
+                <p>
+                    HTML essentially provides the page with content and structure. What it doesn't provide is styling; that's covered by <a class="link" href="css.html">Cascading Style Sheets</a>. Every page on the web will boil down to pure HTML, no matter how fancy it may appear in your web browser. If you'd like to view the page structure of a web page currently online, simply follow the steps below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-device-desktop"></span>
+                        Open up your web browser
+                    </li>
+                    <li>
+                        <span class="octicon octicon-device-desktop"></span>
+                        Navigate to a website(eg. <a class="link" href="http://marvel.com/guardians" target="_blank">http://marvel.com/guardians</a>)
+                    </li>
+                    <li>
+                        <span class="octicon octicon-device-desktop"></span>
+                        Once the page has loaded, right-click and select 'View page source'
+                    </li>
+                </ul>
+                <p>
+                    This will give you access to the HTML of your favourite websites and let you have a closer look at what professional web designers and developers are doing with HTML.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages covered in the work exerience project. If you are interested to learn more about HTML and working through various examples please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.w3schools.com/html/" target="_blank">w3schools - learning HTML</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.codecademy.com/en/tracks/web" target="_blank">Codecademy - HTML & CSS</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.htmldog.com/guides/html/beginner/" target="_blank">HTML Dog - HTML beginner tutorial</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://teamtreehouse.com/" target="_blank">treehouse - subscription based learning(but does offer a 14 day free trial)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

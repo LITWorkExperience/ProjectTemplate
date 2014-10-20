@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>CSS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+
+                <h2>
+                    <a name="intro">CSS - Cascading Style Sheets</a>
+                </h2>
+                <p class="lead">
+                    <em>Making the web look pretty since 1996</em>
+                </p>
+
+                <p>
+                    CSS is the language for describing and altering presentation of web pages(colours, fonts, data layout, etc). It gives designers and developers the ability to adapt the presentation of a web page to different types of devices, such as large screens, small screens, or printers. CSS is independent of HTML and can be used with any XML-based markup language. The separation of HTML from CSS makes it easier to maintain sites(especially when something stops working), tailor pages to different environments/devices, etc. This is known as the separation of structure (or content) from presentation.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>CSS Selectors</h3>
+                <p>
+                    Before we get into explaining how CSS can be applied to a web site, we must first explain how CSS works. At a glance, it's very simple. CSS styling is applied to elements on a web page using CSS selectors. Below is a simple example of a CSS selector that will change the background colour of all &lt;div&gt; elements to green.
+                </p>
+                <pre>
+div { background-color: green; }
+                </pre>
+                <p>
+                    Selectors are the backbone of CSS and how it works. Once you know how to apply these selectors then you can use CSS to enhance the presentation of a web page or web site.
+                    Below is an example of the &lt;div&gt; before styling and then after styling has been applied.
+                </p>
+                <p><b>Before</b></p>
+                <div class="beforeContainer">
+                    <h5>Hello World!</h5>
+                    <p>This is a paragraph of text...</p>
+                    <ul>
+                        <li>link 1</li>
+                        <li>link 2</li>
+                        <li>link 3</li>
+                    </ul>
+                </div>
+                <br>
+                <p><b>After</b></p>
+                <div class="afterContainer">
+                    <h5>Hello World!</h5>
+                    <p>This is a paragraph of text...</p>
+                    <ul>
+                        <li>link 1</li>
+                        <li>link 2</li>
+                        <li>link 3</li>
+                    </ul>
+                </div>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>How to apply CSS</h3>
+                <p>
+                    There are 3 main ways to apply CSS to your web pages. They are in-line, internal and external. Firstly, it's important to note that whilst CSS isn't necessarily governed on the web, it is important to make sure we use it properly on web pages. The separation of CSS files from HTML markup helps ensure HTML is readible and accessible.
+                </p>
+                <p>
+                    Accessible HTML means that disabled users(eg. a blind person) can still access the web and engage with the content through devices known as 'screen readers'. These devices scan all the elements on the page and read the content back to the user. If we are to add styles to our HTML directly, it can affect the result that is read back to the user. Moving aside from accessibility, mixing CSS with HTML can be very difficult to debug for web designers and developers if a problem arises on a web page.
+                </p>
+                <p>
+                    As mentioned above, CSS isn't heavily-governed on the web and this is why various browsers can display the same web page in different ways. The more you work with CSS(especially in older web browsers), the more familiar you will become with how Google's Chrome browser will display things in a different manner to Microsoft's Internet Explorer browser. However, this is a topic that you will learn as you get more familiar with CSS.
+                </p>
+                <p>
+                    There are 3 ways that you can include CSS on a web page. We'd recommend that you go with option 3 - External style sheets, but it's important that we explain each way to apply them.
+                </p>
+                
+                <p class="lead">
+                    <span class="mega-octicon octicon-file-code"></span>
+                    <em>In-line</em>
+                </p>
+                <p>
+                    In-line styles are added directly into the HTML markup. Below is a simple example to highlight how an in-line works.
+                </p>
+                <pre>
+                    <xmp>
+<h1 style="color: green">Guardians of the Galaxy</h1>
+                    </xmp>
+                </pre>
+                    This will make the header text green.
+                </p>
+                <p>
+
+                </p>
+                
+                <p class="lead">
+                    <span class="mega-octicon octicon-file-code"></span>
+                    <em>Internal</em>
+                </p>
+                <p>
+                    Internal styles are added in the head element in the HTML of a web page. They are wrapped in &lt;style&gt; tags.
+                </p>
+                <pre>
+                    <xmp>
+<html>
+    <head>
+        <title>Guardians of the Galaxy</title>
+        
+        <style>
+
+            h1 { color: green; }
+            h2 { color: blue; }
+        
+        </style>
+        ...
+                    </xmp>
+                </pre>
+                <p>
+                    This will make the header text for h1 header text green and header text for h2 header text blue.
+                </p>
+                
+                <p class="lead">
+                    <span class="mega-octicon octicon-file-code"></span>
+                    <em>External</em>
+                </p>
+                <p>
+                    External styles are contained in a separate file and can be used across an entire web site, not just for one single page. This makes external styling a very popular option and something that most web developers do. Below is an example of a basic style that will be saved in the file 'style.css'.
+                </p>
+                    <pre>
+h1 { color: green; }
+                    </pre>
+                    <p>
+                        style.css must be referenced from the HTML page you wish to apply the styling to.
+                    </p>
+                    <pre>
+                        <xmp>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        ...
+                        </xmp>
+                    </pre>
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages covered in the work exerience project. If you are interested to learn more about CSS and work through various examples please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.w3schools.com/css/" target="_blank">w3schools - learning CSS</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN - CSS reference guide</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.htmldog.com/guides/css/beginner/" target="_blank">HTML Dog - CSS beginner tutorial</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://css-tricks.com/" target="_blank">CSS-Tricks - One of the best online resources for learning how to use CSS effectively & great for learning snazzy tips</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.w3.org/WAI/intro/accessibility.php" target="_blank">W3C Web Accessibility Guidelines</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

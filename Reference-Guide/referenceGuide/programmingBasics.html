@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>Programming Basics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+
+                <h2>
+                    <a name="intro">The Basics of Programming</a>
+                </h2>
+                <p class="lead">
+                    <em><q>There are two ways to write error-free programs; only the third one works</q> :)</em>
+                </p>
+              <p>
+                This is just a brief section created with the intention of explaining the basics of programming. Programming is the act of writing a computer program. Computer programs are essentially instructions that when translated by a computers central processing unit(CPU) will execute a series of instructions. For example, when you click a button on a web page, there is programming code running in the background that will inform the computer that a button has been clicked and it will interpret instructions that will take the web browser to the next page.
+              </p>
+              <p>
+                Learning to program is a very important skill. Coding affects our daily lives in ways that we can't even imagine. If we even consider the basic functions of a smartphone; the ability to turn it on, login to the device via a pin code/swipe combination, play music, etc. These functions are all achieved by the software that has been created and is running behind the scenes.
+              </p>
+              <p>
+                As with smartphone apps, web development requires programming knowledge and it's important that we explain the basics of programming before taking things any further. At this point, it is worth noting that programming can take time to fully understand, so don't be disheartened if these principles take time to settle in. Also, there's always help available by simply asking your mentors for assistance(that's what they're there for :) )
+              </p>
+              <p>
+                The programming language we are going to be using in this project is JavaScript. If you're unfamiliar with JavaScript, don't panic, we have a section dedicated purely to explaining JavaScript <a href="javascript.html">here</a>.
+              </p>
+              <p>
+                Okay, so now you've had a brief intro, let's take a look at some programming code.
+              </p>
+            </div>
+
+            <div class="col-md-8">
+              <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Variables</h3>
+              <p>
+                Variables are used to store pieces of information(words, numbers, images, etc). They are the bread and butter of every computer program. They can be used to store the simplest of data to the most complex things. Below shows an example of 3 different variables being declared and used to store different information.
+              </p>
+              <p>
+                <b>Note:</b> Every variable requires the 'var' keyword to be placed before the variable name itself. This informs the compiler that you are creating a new variable.
+              </p>
+              <br>
+              <pre>
+var greeting = 'Hello! We hope you are enjoying this.';
+              </pre>
+              <p>
+                In the programming code above we are creating a variable called greeting and we are assigning some text to the variable. This will mean that when we access the values of this variable in our program, it will contain the following text - <b>Hello! We hope you are enjoying this.</b>.
+              </p>
+              <br>
+              <pre>
+var today = new Date();
+              </pre>
+              <p>
+                In this example, we are creating a variable called 'today' and we are passing a new Date() value into the variable. This will result in variable today containing the following information when inspected - 
+                <b>Mon Sep 01 2014 10:33:12 GMT+0100 (GMT Daylight Time)</b> 
+              </p>
+              <br>
+              <pre>
+var hourNow = today.getHours();
+              </pre>
+              <p>
+                The above example shows how a variable called 'hourNow' is populated with today's getHours() function. This will result in hourNow containing the value <b>10</b> as today's time was 10:33:12.
+              </p>
+              <p>
+                Variables can also be used to compute different outcomes in programs. For example, if we have a variable called 'operation', we can do different things to our values based on what the 'operation' variable contains. In the example below, the value of 'operation' is 'subtraction' so it will make our program work out a sum of two numbers using subtraction, otherwise, it will simply set the result to zero.
+              </p>
+              <pre>
+var operation = 'subtraction';
+var result;
+
+if (operation == 'subtraction') {
+  result = 30 - 15;
+}
+else {
+  result = 0;
+}
+              </pre>
+            </div>
+
+            <div class="col-md-8">
+              <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Functions</h3>
+              <p>
+                Functions are at the core of programming. They are used to perform various operations and manipulate data in a way that the programmer has specificially required. Functions are covered in more detail in our <a href="javascript.html">JavaScript</a> section of the reference guide but the following examples will give you a basic understanding of how a function works. Below are a few examples which explain the basics of functions in programming.
+              </p>
+              <br>
+              <pre>
+function addition(num1, num2) {
+  
+  var result = num1 + num2;
+  return result;
+
+}
+              </pre>
+              <p>
+                This example shows a basic function called addition. The function takes two values(also known as parameters) and adds them together. This is a very simple example of how a function can be used to perform a task for programmers. So, if we wanted to use this function somewhere else in our programming code, we would simply type the following:
+              </p>
+              <br>
+              <pre>
+addition(2, 4);                
+              </pre>
+              <p>This would result in getting the value <b>6</b> returned from the function to our program.</p>
+              <br>
+              <p>
+                Another good example of basic functions would be to incorporate the variables that we've already covered and use them in a new function. In the programming code below, we are going to setup our variables today, hourNow and greeting and then call a new function to work out what is the most appropriate greeting to display depending on the hour of the day.
+              </p>
+              <br>
+              <pre>
+function setGreeting(hourNow) {
+
+  if (hourNow > 18) {
+      greeting = 'Good evening!';
+  } else if (hourNow > 12) {
+      greeting = 'Good afternoon!';
+  } else if (hourNow > 0) {
+      greeting = 'Good morning!';
+  } else {
+      greeting = 'Hello!';
+  }
+
+  return greeting;
+}
+
+var today = new Date();
+var hourNow = today.getHours();
+var greeting;
+
+setGreeting(hourNow);
+              </pre>
+              <p>
+                This is a great example to round up this section as we are covering variables, functions and conditional logic(another area covered in the JavaScript section). Basically, we have created our 3 variables and then passed the hourNow variable to the setGreeting() function. This function will then check the value of hourNow and depending on what hour of the day it is, the message variable will be manipulated and returned to the program. Conditional logic is used to determine what the message variable will contain. The example below displays what is known as an if-else statement.
+              </p>
+              <br>
+              <pre>
+if (hourNow > 18) {
+    greeting = 'Good evening!';
+} else if (hourNow > 12) {
+    greeting = 'Good afternoon!';
+} else if (hourNow > 0) {
+    greeting = 'Good morning!';
+} else {
+    greeting = 'Hello!';
+}
+              </pre>
+              <p>
+                If-else statements are very simple to explain. They are basically a programmers way of ensuring different tasks are performed on variables based on the values that they contain. In the above example, if hourNow is greater than 18, the message variable is set to 'Good evening!', or if the hourNow value is greater than 12 but less than 18, it is set to 'Good afternoon!'. If the hourNow value is greater than 0 but less than 12, the value 'Good morning!' is assigned to greeting. In the off chance that the value passed to setGreeting() doesn't contain a numerical value, the greeting value is simply set to 'Hello!'. This ensures that the function can manipulate the greeting message for all types of values.
+              </p>
+              <p>
+                This is a very basic introduction to programming with JavaScript and if you are wanting to learn more, please visit the links below.
+              </p>
+              <ul>
+                <li>
+                  <span class="octicon octicon-book"></span>
+                  <a class="link" href="http://eloquentjavascript.net/">Eloquent JavaScript - Beginners guide to programming using JS</a>
+                </li>
+                <li>
+                  <span class="octicon octicon-book"></span>
+                  <a class="link" href="http://www.codecademy.com/en/tracks/javascript">Codecademy - Getting started with programming</a>
+                </li>
+                <li>
+                  <span class="octicon octicon-book"></span>
+                  <a class="link" href="http://www.programmingbasics.org/">Programming Basics</a>
+                </li>
+                <li>
+                  <span class="octicon octicon-book"></span>
+                  <a class="link" href="https://www.khanacademy.org/hour-of-code/hour-of-code-tutorial/v/welcome-hour-of-code">Khan Academy's learn to program tutorials</a>
+                </li>
+              </ul>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

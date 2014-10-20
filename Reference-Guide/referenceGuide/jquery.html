@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles, James Anderson">
+
+    <title>LIT Work XP Reference Guide</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+
+                <h2>
+                    <a name="intro">JQuery</a>
+                </h2>
+                <p class="lead">
+                    <em>A neat JavaScript framework</em>
+                </p>
+
+                <p>
+                	JQuery is a JavaScript library which provides additional functionality that often makes access to elements on the page much easier for the developer as well as providing other functionality which makes coding a lot easier.  For our needs we will only be using a very small section of the tools that JQuery makes available to us, but there is plenty more functionality available which you can find in the links below.
+                </p>
+                
+                <p> 
+                	To use JQuery we need to download and import the file.  This has been done for you within the template document but can be seen below.  Note that there are different versions of JQuery, the later versions will provide greater functionality - our version is 2.1.1.
+                </p>
+<pre>
+<xmp>
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+</xmp>
+</pre>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Selectors</h3>
+                <p>
+                    The core of what we are going to use JQuery for in our project is to select specific or groups of elements.  This is done by accessing the Document Object Model (DOM) which is a tree of all the html tags and searching for the ones which we require.  It searches by ID or class which are html attributes that can be put onto html tags.  It can also search for different types of tags.  This can be seen below.  Note that the $ symbol is used to denote any JQuery operation.
+                </p>
+<pre>
+<xmp>
+// In the html...
+<div id="firstDiv" class="divs"></div>
+<div id="secondDiv" class="divs"></div>
+
+// In the javascript...
+$("#firstDiv"); // This will return only the first div
+
+$(".divs"); // This will return both the divs
+
+$("div"); // This will also return both the divs
+</xmp>
+</pre>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>What to do once you have selected an element</h3>
+
+                <p>
+                    Once you have grabbed the html element(s) that you want, you will want to perform some action on them.  This could be as simple as getting the value out of a textbox, or showing or hiding elements on the page:
+                </p>
+<pre>
+<xmp>
+<script>
+var name = $("#nameTextbox").val();
+var age = $("#ageTextbox").val();
+
+$("#firstDiv").show();
+$("#firstDiv").hide();
+</script>
+</xmp>
+</pre>
+
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Handling groups of elements</h3>
+
+                <p>
+                    Sometimes when we grab a group of elements using the class selector or by grabbing an element type we want to either find a specific element within that group or perform an action on all the elements.  For more information on these check out the JQuery documentation.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages covered in the work exerience project. If you are interested to learn more about jQuery and work through various examples please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://learn.jquery.com/" target="_blank">jQuery - Learning how to program with jQuery</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://jquery.com/" target="_blank">jQuery Official Documentation</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.codecademy.com/en/tracks/jquery" target="_blank">Codecademy - jQuery Tutorials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

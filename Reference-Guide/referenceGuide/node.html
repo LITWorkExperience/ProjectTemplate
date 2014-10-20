@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles, James Anderson">
+
+    <title>LIT Work XP Reference Guide</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+
+                <h2>
+                    <a name="intro">Node</a>
+                </h2>
+                <p class="lead">
+                    <em>Sever-side JavaScript</em>
+                </p>
+
+                <p>
+                	Node is a relatively new scripting development language which is booming into popularity due to its ability to be written and learnt quickly.  As you will see within the project, the use of JS within web development is pretty fundamental and has many uses (basic JS, JQuery, AJAX, JSON etc.).  Node took the existing language of JavaScript and allowed it to be run on the Chrome V8 engine on the server.  Due to the speed at which it can be created, we are going to use it for our project.  For examples on how to write JS for node check out the JS cheat sheet.  It is worthwhile noting that JQuery is purely client side and has no place within node.
+                <br/>
+                	On a server, such as the API which we are creating, there are a few key concepts that you need to know:
+                    <ul>
+                        <li>
+                            <span class="glyphicon glyphicon-ok"></span>
+                            Http Requests and Responses
+                        </li> 
+                        <li>
+                            <span class="glyphicon glyphicon-ok"></span>
+                            Routing
+                        </li>
+                        <li>
+                            <span class="glyphicon glyphicon-ok"></span>
+                            Asynchronous Execution
+                        </li>
+                    </ul>
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>HTTP Request and Response</h3>
+                <p>
+                    HTTP (Hyper-text transfer protocol) is the basis for all information passed around on the internet.  When you request a webpage, your browser generates an http request and sends it to the required URL.  It then waits until a response is recieved and displays the data returned (i.e. the html/css/js).  We are creating our own http request and responses, the AJAX creates the request which is sent to our node server, which then generates the response which is passed back to the client.<br/>
+                    In this way our data is being sent to and from the client and the server.  Now the important thing to note here is that there are different types of request that can be made, depending on what the client needs.  There are: <br />
+                    <ul>
+                        <li><b>GET</b> requests which are used to get specific information from the server</li>
+                        <li><b>POST</b> requests which take in data, which is encrypted and sent to the server to be saved</li>
+                        <li><b>DELETE</b> requests which tell the server to delete existing data records</li>
+                        <li><b>PUT</b> requests are used to replace the current data with the new data provided</li>
+                    </ul>
+                    There are other types available, but they are less commonly used.  Within our server we need to specify the type of request for each url.  An example of this (POST) can be seen in the next section.
+                </p>
+
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Routing</h3>
+                <p>
+                    A node server is a very simple concept.  It will recieve Http Requests and will send out an Http Response.  When a request is recieved, it includes a specific URL which provides the route for the server to follow in order to provide the client with the information that it requires.  The server is setup in such a way that it can take the URL and can decipher which block of code or function to call for that route.  We are using a library called "express" to handle our routing for us.  We tell the express router that we want to create a specific type of route for the type of request that the server will recieve (GET, POST etc.).  When we set up the route, we provide the URL that the client must call to access this route and a function which holds the code to run when the route is called.  This function takes in two parameters, the http request and response objects.
+                </p>
+<pre>
+<xmp>
+router.post('url/of/the/route', function(requestObject, responseObject){// Code to run; });
+</xmp>
+</pre>
+
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Asynchronous Execution</h3>
+
+                <p>
+                    This is the key to why node is succesful as a server.  Unlike the client JS, where execution is sequential, the node server allows us to deal with multiple server calls at the same time.  This is vital, as a server must be able to deal with multiple different clients hitting it at the same moment and be able to deal with their request quickly and effectively.  Our server.js file defines the server and it's execution cycle.  It sets it up and once created, it responds to several different requests simultaneously.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages covered in the work exerience project. If you are interested to learn more about Node and work through various examples please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://nodejs.org/api/" target="_blank">Node's Official Documentation</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4" target="_blank">Creating a RESTful API</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

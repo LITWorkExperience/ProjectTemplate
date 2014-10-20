@@ -1,0 +1,113 @@
+  /* Basic styles for reference guide */
+  /* Andrew Hiles */
+
+  .row {
+    margin-top: 40px;
+  }
+
+  .leadHeaders:hover {
+  	color: seagreen;
+  	-webkit-transition: color 1s ease-in;
+	-moz-transition: color 1s ease-in;
+  	-o-transition: color 1s ease-in;
+  	transition: color 1s ease-in;
+  }
+
+  a.link:hover {
+  	color: darkorange;
+    text-decoration: underline;
+  	-webkit-transition: color 1s ease-in;
+	  -moz-transition: color 1s ease-in;
+  	-o-transition: color 1s ease-in;
+  	transition: color 1s ease-in;
+  }
+
+  .codeOutput {
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 10px;
+  }
+
+  .codeBlock {
+  	margin: auto;
+  }
+
+  /* Highlight code blocks in red */
+  pre {
+    color: darkred;
+  }
+
+  .octicon-chevron-right {
+    padding-right: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+
+  li {
+  	padding-bottom: 8px;
+  }
+
+
+  .rwdExample {
+    opacity: 0.5;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+  }
+
+  .rwdExample:hover {
+    opacity: 1;
+  }
+
+/* Remove default underline from Bootstrap CSS */
+  a:hover {
+    text-decoration: none;
+  }
+
+div.boxContainer {
+  width: 50%;
+  height: 60%;
+  background-color: NAVAJOWHITE;
+  border: 1px solid DARKSLATEGRAY;
+}
+
+.boxContainer p {
+  color: DARKSLATEGRAY;
+  padding: 5%;
+}
+
+.btnHideTable {
+  display: none;
+}
+
+.beforeContainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid DARKSLATEGRAY;
+}
+
+.afterContainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid DARKSLATEGRAY;
+  background-color: green;
+}
+
+img.responsiveImage {
+	height: auto;
+	max-width: 100%;
+	padding-top: 25%;
+
+}
+
+.linkBasic {
+  color: black;
+}
+
+.linkRed {
+  color: BROWN;
+}

@@ -1,0 +1,14 @@
+/* Basic styles for CSS example page */
+/* Andrew Hiles */
+
+body {
+	background-color: darkred;
+}
+
+p {
+	color: white;
+}
+
+h3 {
+	color: seagreen;
+}

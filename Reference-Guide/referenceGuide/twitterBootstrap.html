@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>Twitter Bootstrap</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet">   
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+                <h2>
+                    <a name="intro">Twitter Bootstrap</a>
+                </h2>
+                <p class="lead">
+                    <em>The fastest way to prototype</em>
+                </p>
+                <p>
+                    Twitter Bootstrap is a powerful front-end framework for faster web development(this reference guide was created using Twitter Bootstrap). It includes HTML and CSS based design templates for common user interface components like fonts, forms, buttons and many other web controls. Twitter Bootstrap also gives you the ability to create responsive layouts without having to know too much about grid-based design principles.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Advantages in using Twitter Bootstrap</h3>
+                <p>
+                    The biggest advantage of using Twitter Bootstrap is that it comes with a free set of tools for creating flexible and responsive web layouts as well as common interface components.
+                    On top of providing these components, it also offers a lot of existing JavaScript functionality that can be easily integrated into your web pages. Below are just a few of the advantages in using Twitter Bootstrap over another front-end framework:
+                </p>
+                <ul>
+                    <li>
+                        <span class="glyphicon glyphicon-ok"></span>
+                        Save Time — You can save considerable amounts of time and effort using the Bootstrap pre-defined templates, CSS classes, etc.
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-ok"></span>
+                        Clear & Consistent Design — All Bootstrap components share the same design templates and styles through a central library. This ensures that the designs and layouts of your web pages are consistent throughout an entire project/application.
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-ok"></span>
+                        Ease of Use — Twitter Bootstrap is very easy to use. Having a basic knowledge of <a class="link" href="html.html">HTML</a> and <a class="link" href="css.html">CSS</a> can get you started very quickly. The <a class="link" href="http://getbootstrap.com/components/">components</a> page has great documentation which specifies how web controls should be used, styled, etc.
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-ok"></span>
+                        Browser Compatibility — Twitter Bootstrap is created with modern browsers in mind and is compatible with all modern browsers(Google Chrome, Mozilla Firefox, Safari, & Internet Explorer).
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-ok"></span>
+                        Open Source — The framework is completely free of charge. You can take it and integrate it into your project without having to deal with additional licensing costs. Also, as it's very popular within the open source community, developers are continually developing plug-ins that will help increase the usage of Twitter Bootstrap.
+                    </li>
+                </ul>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>The power of Twitter Bootstrap</h3>
+                <p>
+                    Now that you are a little bit more familiar with the general funcitonality of Twitter Bootstrap it's time to demonstrate just how powerful this framework can be. Simply click the button below to toggle Bootstrap on/off on this page. We think you'll notice a difference <span class="glyphicon glyphicon-thumbs-up"></span>.
+                </p>
+                <br>
+                <input type="button" class="toggleBootstrap btn btn-primary" value="Turn Bootstrap On/Off" />
+                <br><br>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    To learn more about Twitter Bootstrap and how everything works, we'd recommend that you visit the <a class="link" href="http://getbootstrap.com/components/" target="_blank">Bootstrap components</a> page - It's an extensive guide that provides real-time examples of how the Bootstrap framework works and proves to be a very reliable resource. We referred to it many times during the creation of the car insurance application and this page :).
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Disable/Enable style sheets on page functionality -->
+    <script>
+
+        $(document).ready(function() {
+            $('.toggleBootstrap').click(function() {
+
+                if($('link[rel="stylesheet"]').attr('disabled') == 'disabled') {
+                  $('link[rel="stylesheet"]').removeAttr('disabled');  
+                }
+                else {
+                    $('link[rel="stylesheet"]').attr('disabled', 'disabled'); 
+                }
+            })
+        });
+    
+    </script>
+
+</body>
+
+</html>

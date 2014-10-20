@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>Examples</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet"> 
+
+    <!-- Examples CSS -->
+    <link href="../css/cssExample.css" rel="stylesheet" title="cssExample">  
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+                <h2>
+                    <a name="intro">Examples</a>
+                </h2>
+                <p class="lead">
+                    <em>Here's what we made earlier</em>
+                </p>
+                <p>
+                    Below are just a few simple examples to help demonstrate how the various technologies we've covered work. Feel free to click buttons and have some fun :)
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>CSS</h3>
+                <p>
+                    Click the button to modify the CSS on this page.
+                </p>
+                <input type="button" class="toggleCSS btn btn-primary" value="Modify CSS" />
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>JavaScript</h3>
+                <p>
+                    JavaScript is very powerful. It can interact directly with a web page and manipulate values on the fly. When you click the button below, several JavaScript functions will be called that will attempt to predict the top 6 football clubs in the English Premier League. Give it a try and if your team aren't top, you can always click again to randomize the table :)
+                </p>
+                <input id="btnPredict" type="button" class="btn btn-primary" value="Predict" />
+                <br><br>
+                <div id="leagueTable" class="leagueDisplay">
+                    <table id="topSixTeams" class="table table-bordered table-hover">
+                    </table>
+                    <input id="btnHideTable" type="button" class="btn btn-primary btnHideTable" value="Hide table" />
+                </div>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>jQuery</h3>
+                <p>
+                    jQuery is just as powerful as JavaScript. It's actually a framework built using JavaScript but it lets developers do a lot more but write less code. jQuery offers some nifty UI effects and can really improve the look and feel of a website. If you hover over the red box below, you will get a glimpse of what jQuery can do.
+                </p>
+                <div class="boxContainer">
+                    <p>hover here...</p>
+                </div>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Twitter Bootstrap</h3>
+                <p>
+                    Behold the power of Twitter Bootstrap. Turn it on/off by clicking the button below.
+                </p>
+                <input id="btnToggleBootstrap" type="button" class="btn btn-primary btnToggleBootstrap" value="Bootstrap Off" />
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Disable/Enable style sheets on page functionality -->
+    <script>
+
+        $(document).ready(function() {
+
+            $("div.boxContainer").mouseover(function() {
+                $(this).find('p').text("ahhhhhhhhhhhhhhhhhhh!").append("<span class='mega-octicon octicon-squirrel'></span>");
+              })
+              .mouseout(function() {
+                $(this).find('p').text("hover here...");
+              })
+
+            $('link[title="cssExample"]').attr('disabled', 'disabled');
+
+            $('.toggleCSS').click(function() {
+                if($('.toggleCSS').val() == 'Modify CSS') {
+                    $('link[title="cssExample"]').removeAttr('disabled');
+                    $('.toggleCSS').val('Restore CSS');
+                }
+                else {
+                    $('link[title="cssExample"]').attr('disabled', 'disabled');
+                    $('.toggleCSS').val('Modify CSS');
+                }
+            })
+
+            $('.btnToggleBootstrap').click(function() {
+                if($('link[rel="stylesheet"]').attr('disabled') == 'disabled') {
+                  $('.btnToggleBootstrap').val('Bootstrap Off');
+                  $('link[rel="stylesheet"]').removeAttr('disabled');
+                  $('link[title="cssExample"]').attr('disabled', 'disabled');  
+                }
+                else {
+                    $('.btnToggleBootstrap').val('Bootstrap On');
+                    $('link[rel="stylesheet"]').attr('disabled', 'disabled'); 
+                }
+            })
+
+        });    
+
+        /* Unobtrusive JS - Adding onclick event from script rather than inserting directly into the DOM */
+        var predictButton = document.getElementById('btnPredict');
+
+        predictButton.onclick =
+        function predictTopSix() {
+
+            // Declare football team array
+            var footballTeams = ["Arsenal", "Chelsea", "Liverpool", "Manchester City", "Manchester United", "Tottenham Hotspur"];
+
+            // Pass teams array to functions
+            shuffleArray(footballTeams);
+            outputTable(footballTeams);
+            styleTable();
+        };
+
+        function shuffleArray(array) {
+                
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+
+            return array;
+        }
+
+        function outputTable(array) {
+
+            // Clear table
+            for (var i = document.getElementById("topSixTeams").rows.length; i>0; i--) {
+                document.getElementById("topSixTeams").deleteRow(i-1);
+            }
+
+            // Setup elements
+            var table = document.getElementById('topSixTeams');
+            var rowCount, row, firstCell, secondCell;
+
+            row = table.insertRow(0);
+            firstCell = row.insertCell(0);
+            firstCell.innerHTML = "Position";
+            secondCell = row.insertCell(1);
+            secondCell.innerHTML = "Club";
+
+            // Loop over array and display top 6 teams              
+            for (var i = 0; i < array.length; i++) {
+
+                rowCount = table.rows.length;
+                row = table.insertRow(rowCount);
+                firstCell = row.insertCell(0);
+                firstCell.innerHTML = rowCount;
+                secondCell = row.insertCell(1);
+                secondCell.innerHTML = array[i];
+            }
+
+            document.getElementById('leagueTable').style.display = 'block';
+            document.getElementById('btnHideTable').style.display = 'block';
+        }
+
+        function styleTable() {
+
+            var els = document.getElementById('topSixTeams').getElementsByTagName('tr');
+            els[0].style.background = 'darkorange';
+            els[0].style.fontWeight = 'bold';   
+        }
+
+        /* Unobtrusive JS - Adding onclick event from script rather than inserting directly into the DOM */
+        var hideButton = document.getElementById('btnHideTable');
+
+        hideButton.onclick =
+        function hideTopSix() {
+            var leagueTable = document.getElementById('leagueTable').style.display = 'none'; 
+        }
+
+    </script>
+
+</body>
+
+</html>

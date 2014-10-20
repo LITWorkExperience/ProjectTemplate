@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>Responsive Web Design(RWD)</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet">   
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+                <h2>
+                    <a name="intro">RWD - Responsive Web Design</a>
+                </h2>
+                <p class="lead">
+                    <em>One size fits all</em>
+                </p>
+                <p>
+                    Responsive Web Design is something that's really started to gain considerable attention in the world of web design/development over the past 3 years. It all started when web designer, Ethan Marcotte, crafted a famous <a class="link" href="http://alistapart.com/article/responsive-web-design" target="_blank">article</a> which changed web page structure as we know it. The main thing you need to know about responsive web design is that when implemented properly, it makes a website respond to its environment(eg. suitable on any device). This shift took time to gather traction but now in 2014, if businesses are wanting web sites created, they want them to be responsive. 
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Why go responsive?</h3>
+                <p>
+                    Going responsive has it's own drawbacks but they are long-outweighed by the positives. The biggest issue in going responsive is time. The original approach to creating and positioning web sites was to use table-based layouts but this posed problems when users reduced their browser sizes or switched to smaller screens, forcing web sites to look strange and even content moving offscreen and out of view for the user. However, once developers/designers become more aware of a 'responsive first' approach, they can tailor web sites to respond to different screen dimensions much easier and with greater speed.
+                </p>
+                <p>
+                    We are now living in an era where information is made readily-available to users via the mobile web. People are no longer waiting until they can get to a desktop/laptop device to view websites, they're using their smartphones or tablet devices. This is where RWD really excels as it gives the user a tailored-approach depending on the device they are using. This ensures that they aren't missing any content and everything they are looking for is being presented on screen as the developer/designer intended. <a class="link" href="https://twitter.com/adactio" target="_blank">Jeremy Keith</a> once said "Stop thinking in pages. Start thinking in systems" - By tailoring websites per device(desktop, laptop, tablet, smartphone, etc) using RWD, we achieve this.
+                </p>
+                <p>
+                    Below are various examples that highlight the impact of Responsive Web Design. These are only a few examples taken from <a class="link" href="http://www.mediaqueri.es/" target="_blank">mediaqueri.es</a>. Feel free to visit the site for more examples and witness how many companies are using RWD for their coporate websites.
+                </p>
+                <br>
+                <p><b>Pack's responsive layout (sourced from <a class="link linkRed" href="http://mediaqueri.es" target="_blank">mediaqueri.es</a>)</b></p>
+                <img class="codeOutput rwdExample" src="rwd1.png">
+                <br><br>
+                <p><b>Erik Ford's responsive layout (sourced from <a class="link linkRed" href="http://mediaqueri.es" target="_blank">mediaqueri.es</a>)</b></p>
+                <img class="codeOutput rwdExample" src="rwd2.png">
+                <br><br>
+                <p><b>The Great Discontent's responsive layout (sourced from <a class="link linkRed" href="http://mediaqueri.es" target="_blank">mediaqueri.es</a>)</b></p>
+                <img class="codeOutput rwdExample" src="rwd3.png">
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>How to go responsive</h3>
+                <p>
+                    Responsive Web Design is achieved by incorporating the following 3 things into practice when designing/developing websites.
+                </p>
+                <ul>
+                    <li>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <a class="link" a href="#mediaQueries">CSS media queries</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <a class="link" a href="#fluidMedia">Fluid media</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <a class="link" a href="#gridBasedLayout">Grid-based layout</a>
+                    </li>
+                </ul>
+                <p>We will explain these in more detail below.</p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span><a class="linkBasic" name="mediaQueries">CSS media queries</a></h3>
+                <p>
+                    Media queries are at the heart of Responsive Web Design. Through the use of media queries we can target specific browser sizes and determine how to display web pages based on the result they return. Media Queries have been around for a long time but it's only recently that web designers and developers have started to truly understand their capabilities.
+                </p>
+                <p>
+                    By using media queries we can make our CSS adapt page content to desktop, tablet and mobile layouts that will ensure the user doesn't miss anything important. Media queries are CSS properties and should be kept in CSS files when used on web pages. Below are examples of three different media queries. Each query targets a different browser size and depending on the size, limits the sizing of the HTML element 'container'.
+                </p>
+                <pre>
+/* Desktop sizing */
+@media screen and (max-width: 1000px) {
+
+    #container { width: 100%; }
+
+}
+
+/* Apple iPad sizing */
+@media screen and (max-width: 768px) {
+    
+    #container { width: 70%: }
+
+}
+
+/* Smaller tablet sizing */
+@media screen and (max-width: 600px) {
+
+    #container { width: 50%; }
+
+}
+                </pre>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span><a class="linkBasic" name="fluidMedia">Fluid media</a></h3>
+                <p>
+                    In earlier times of the world wide web, it was normal for images to be set to a specific height and width in pixels but this always came with a caveat: If you minimized or maximized the web browser, then the images would begin to move out of place and leave web pages looking horrible.
+                </p>
+                <p>
+                    Responsive images are a big part of RWD. If your images aren't responsive, then everything's going to look out of proportion when users minimize/maximize the screen size. One of the best ways to work around this issue in modern times has been to place our images inside a &lt;div&gt; container and to set its max-width to 100% like in the example below: 
+                </p>
+                <pre>
+img {
+
+  max-width: 100%;
+
+}
+                </pre>
+                <p>
+                    This ensures that images cannot span any greater in size than the size of the &lt;div&gt; that contains them and means when users scale down from desktop screen sizes to smaller screen sizes that the images will scale down appropriately and still look correctly-positioned on the web page. If you don't believe us, click <a class="link" href="responsiveImageDemo.html">here</a> and re-size the browser to see the outcome :) It's also worth pointing out that this works well with embedded videos, too.
+                </p>
+                <p>
+                    There is another way to resize images appropriately that requires writing media queries directly in-line inside the &lt;picture&gt; element. This is displayed below:
+                </p>
+                <pre>
+<xmp>
+<picture alt="description">
+  <source src="small.jpg">
+  <source src="medium.jpg" media="(min-width: 400px)">
+  <source src="large.jpg" media="(min-width: 800px)">
+</picture>
+</xmp>
+                </pre>
+                <p>
+                    Both approaches work, but for best practice, we recommend using the first example(max-width).
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span><a class="linkBasic" name="gridBasedLayout">Grid-based layout</a></h3>
+                <p>
+                    The final component that we need to cover is grid-based layouts. When we think of web pages, we have to remember that they are documents. We have to step back and think of them in a print format, just like a page in a newspaper. One thing that always stands out when reading a newspaper is that the columns are always correctly alligned all throughout. What responsive web design does is encourage designers/developers to start thinking about structuring web pages as though they were printed articles, using a grid-system that keeps everything correctly positioned and ensures the user can view all of the content without having to scroll in the web browser.
+                </p>
+                <p>
+                    The grid is a part of responsive design that really comes down to the designer/developer's personal preference - Eg. Do you go for a grid-based framework(Bootstrap's grid, 960 Grid System, Foundation, etc) or create your own grid-based layout with CSS? Both options have their own strengths and it really depends on how much time you have to create a web site as well as how experienced you are with responsive design principles. For this reference guide, we used Twitter Bootstrap's pre-baked responsive styling - Primarily to get this guide up and running as quickly as possible. We also used it for the car insurance application(just minimize the page and watch how the options collapse into a drop-down menu, etc).
+                </p>
+                <p>
+                    By adopting a grid-based layout, we can split page content into columns. This ensures that when the viewport is reduced/increased, the page columns can be re-ordered to ensure everything is visibile and still in allignment. The code below illustrates a very simple grid-based approach in CSS.
+                </p>
+                <pre>
+/* 12-Column Grid Widths */
+.column-1  {width: 100%;}
+.column-2  {width: 50%;}
+.column-3  {width: 33.33%;}
+.column-4  {width: 25%;}
+.column-5  {width: 20%;}
+.column-6  {width: 16.6666666667%;}
+.column-7  {width: 14.2857142857%;}
+.column-8  {width: 12.5%;}
+.column-9  {width: 11.1111111111%;}
+.column-10 {width: 10%;}
+.column-11 {width: 9.09090909091%;}
+.column-12 {width: 8.33%;}
+                </pre>
+                <p>
+                    By using the grid CSS classes displayed above, we can ensure our web pages are correctly positioned and with the combined use of media queries, it means when the viewport is reduced/increased, the columns can be reduced/expanded to fit the screen.
+                </p>
+                <p>
+                    Using the 12-Column grid that we have included above, we can structure our web pages. Below is a simple example of how we can use our grid structure web page content.
+                </p>
+                
+<pre>
+<xmp>
+<div class="responsiveContainer">
+     <div class="column-1">
+          <h3>Header 1</h3>
+          <p>Test content for section 1</p>
+     </div>
+     <div class="column-2">
+          <h3>Header 2</h3>
+          <p>Test content for section 2</p>
+     </div>
+     <div class="column-2">
+          <h3>Header 3</h3>
+          <p>Test content for section 3</p>
+     </div>
+</div>
+</xmp>
+</pre>
+                <p>
+                    By using the code display above, we are creating a column that spans all across the page(100%) and another two columns that will sit directly below but side by side at 50% widths. In taking this approach it means we can simply use CSS media queries to target when the screen is smaller and then we can make the percentages of the columns reduce to 100%, which will then float them all in a nicely-alligned list.
+                </p>
+                <p>
+                    This is a very brief introduction to how RWD works, especially in terms of explaining grid-based layouts. Please feel free to investigate grid-based layouts further by clicking on the links in the Further Reading section.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages and development principles covered in the work exerience project. If you are interested to learn more about Responsive Web Design and work through various examples please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://alistapart.com/article/responsive-web-design" target="_blank">Ethan Marcotte's A List Apart article on RWD</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design/" target="_blank">Shay Howe's RWD tutorial(covers grid-based layouts very well)</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/" target="_blank">Google Developer, Pete LePage's introduction to RWD</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.huffingtonpost.com/john-rampton/business-mobile-responsive-design_b_5267077.html" target="_blank">Huffington Post's reasons for going responsive</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.mediaqueri.es" target="_blank">mediaqueri.es - RWD examples</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

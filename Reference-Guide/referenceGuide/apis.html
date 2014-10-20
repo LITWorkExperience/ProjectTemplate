@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles">
+
+    <title>APIs</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+
+                <h2>
+                    <a name="intro">APIs</a>
+                </h2>
+                <p class="lead">
+                    <em>Software-to-software interfaces</em>
+                </p>
+                <p>
+                    An Application-Programming Interface(API) is a set of programming instructions used for accessing data from a web site/application. A good example of this would be a web site that offers knowledge and reviews on vintage Playstation One games; the web site might display eBay listings of the games down the side of the page so when a user is reading about a game they can also see how much it would cost if they wanted to purchase a copy from eBay. To do this, the web site must interact with the eBay API - Eg. Every time a user visits a web page for a specific game, the page would send the game title to the eBay API in a request and the API would return information to the page based on the game information sent.
+                </p>
+                <p>
+                    eBay is just one example of how many large companies(Amazon, BBC, DropBox, etc) are releasing APIs that will let third-party developers interact with their services. APIs are becoming more and more popular on the world wide web as they increase the amount of data available to the user. In the case of our car insurance application, we are requesting data from the API when we click the 'retrieve quote' button. Our car insurance application makes a request to the API and in doing so, sends some information(eg. Name, gender, age, car model, etc) with the request. The API then receives the data, calculates a quotation value based on the information received and responds to the application with that value.
+                </p>
+                <p>
+                    APIs can be written in many different programming languages. In our case, we developed the car insurance API using JavaScript and Node. In the code snippet below, we are making an AJAX call to the API, passing information gathered from the page(user & car details). The information being sent is in the data key(gender, age, noClaimsBonus, etc). Once the value has been returned from the API, it is then put into the HTML element 'txtQuote' and displayed on the page for the user to view.
+                </p>
+                <br>
+                <pre>
+$.ajax({
+    type: "GET",
+    url: "http://example.com/api/calculateRates",
+    data: {gender:gender, age:age, noClaimsBonus:yearsNoClaims, costOfCar:costOfCar, insuranceDuration:'12', carStorage:carStorage}
+  }).done(function(msg) {
+    $("#txtQuote").text(msg.result);
+    showQuoteDetails();
+});
+                </pre>
+                <p>
+                    Whilst this might look rather daunting, once you understand the core concepts of how an API works, it will all make sense. This section has been created just to give you a very brief overview into how APIs work and how they can be very beneficial to developers when they are wanting to provide users with data from various services.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages and services covered in the work exerience project. If you are interested to learn more about APIs and how they work please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                      <span class="octicon octicon-book"></span>
+                      <a class="link" href="https://www.youtube.com/watch?v=FknvOGcLHmc" target="_blank">Tools for Entrepreneurs: Introduction to APIs</a>
+                    </li>
+                    <li>
+                      <span class="octicon octicon-book"></span>
+                      <a class="link" href="http://readwrite.com/2013/09/19/api-defined" target="_blank">APIs defined</a>
+                    </li>
+                    <li>
+                      <span class="octicon octicon-book"></span>
+                      <a class="link" href="http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/" target="_blank">Creating a simple web app with an API</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

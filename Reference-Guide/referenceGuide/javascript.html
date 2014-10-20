@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Work experience project, Reference guide, Web development, Coding">
+    <meta name="author" content="Andrew Hiles, James Anderson">
+
+    <title>LIT Work XP Reference Guide</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reference Guide CSS -->
+    <link href="../css/referenceGuide.css" rel="stylesheet">
+
+    <!-- Octicons CSS -->
+    <link href="../octicons/octicons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="referenceGuide.html">Work XP Reference Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    <span class="glyphicon glyphicon-file"></span>
+                    LIT Work XP
+                    <small>Reference Guide</small>
+                </h1>
+
+                <h2>
+                    <a name="intro">Javascript</a>
+                </h2>
+                <p class="lead">
+                    <em>Client-Side programming</em>
+                </p>
+
+                <p>
+                	JavaScript (JS) is primarily a client-side development language which runs locally.  This means that the code is passed down, along with the HTML and CSS, when the page is requested by the server and the browser runs when the code is called.  It is used to increase the user experience (UX) of the website and to allow the developer to have greater control over what the website can do.  It does this by manipulating the DOM (Document Object Model), which is built from the structure of our HTML.  Any element or tag within our document can be found by a unique id or groups of elements by class identifiers.
+                </p>
+                
+                <p> 
+                	Sequential operation - JS is a series of commands which run one after the other.  It can only do what it is told and in the order given.  When writing JS we have to do it either within a separate file which is imported into the html:
+                </p>
+<pre>
+<xmp>
+<script type="text/javascript" src="filename.js"></script>
+</xmp>
+</pre>
+                <p>or within a code block that is put on the html:</p>
+<pre>
+<xmp>
+<script>
+//Javascript code goes here
+</script>
+</xmp>
+</pre>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Functions</h3>
+                <p>
+                    Code is organised into separate blocks which are shown between curly brackets i.e.
+                    <code> { // JS code goes here } </code>
+                    We can give blocks of code specific names which allow us to break up the JS into more readable chunks and which can be called from any other point in the code.  These blocks are known as <b>functions</b>, and are a core part of JS.  For example if we wanted to write a block of code which we would call to print out a custom message to the screen we could do it using a function and a parameter (a variable which is passed into the function so that it can be used) we would get something close to the following:
+                </p>
+<pre>
+<xmp>
+<script>
+    function customAlert(name) {
+        alert(name + " this is a personal message for you");
+    }
+    
+    customAlert("Barry");
+    customAlert("Joan");
+</script>
+</xmp>
+</pre>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Variables</h3>
+
+                <p>
+                    <b>Variables</b> are a programming concept and are places where data is stored.  Once a value is assigned to a variable, it is kept there until the current block of code or function has completed executing.
+                </p>
+<pre>
+<xmp>
+<script>
+    var name = "Barry";
+    var integer = 10;
+
+    var person = {name: "James", age: "25", gender:"male"};
+
+    customAlert(name);
+    integer = integer + 25;
+    customAlert(person.name);
+</script>
+</xmp>
+</pre>
+            <p>
+            Note that in that last code block we saw an interesting type of variable which was "person".  This is what is known as an object and it is a set of different values stored in a single variable, where each variable is identified by a unique key (name, age or gender in our example).  Objects are important in JS and can also be known as <b>JSON</b>.
+                </p>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Condtional (If) statements</h3>
+                <p>
+                    <b>Conditional</b> statements, also known as <b>IF</b> statements are ways to allow the code to make decisions at runtime depending on a specific test.  If the test is true, then the code within the condtional block is run, however if the test is false then it will jump on to any other test conditions or an else block if one exists.  For example, if I had a variable called name and wanted to say that if the name was "Barry" to set an age variable to be 18, but if the name is "Joan", set the age to be 19 and if it is nether to set the age to be 20, we would do it like this:
+<pre>
+<xmp>
+<script>
+    if(name === "Barry") {
+        age = 18;
+    } else if (name == "Joan") {
+        age = 19;
+    } else {
+        age = 20;
+    }
+</script>
+</xmp>
+</pre>
+                <h3 class="leadHeaders"><span class="mega-octicon octicon-chevron-right"></span>Further Reading</h3>
+                <p>
+                    Primarily, the purpose of this reference guide is to give you a basic understanding of the core concepts of the languages covered in the work exerience project. If you are interested to learn more about JS and work through various examples please visit the links below.
+                </p>
+                <ul>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.w3schools.com/js/" target="_blank">w3schools - Learning JavaScript</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://www.codecademy.com/en/tracks/javascript" target="_blank">Codecademy - Javascript</a>
+                    </li>
+                    <li>
+                        <span class="octicon octicon-book"></span>
+                        <a class="link" href="http://htmldog.com/guides/javascript/" target="_blank">HTML Dog - JavaScript Tutorials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span class="glyphicon glyphicon-copyright-mark"></span> Liberty Information Technology, Belfast 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- js source links... -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
